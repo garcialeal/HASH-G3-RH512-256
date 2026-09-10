@@ -1,0 +1,19 @@
+# Compilación y ejecutable
+build/
+bin/
+lib/
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+test_g3
+
+# IDEs y editores
+.vscode/
+.idea/
+*.swp
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
