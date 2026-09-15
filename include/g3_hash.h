@@ -1,4 +1,6 @@
 /*
+ * SPDX-License-Identifier: MIT
+ *
  * G3-RH512-256 Non-Cryptographic Spatial Hash Engine
  *
  * Copyright (C) 2026 Antonio García Leal (garcialeal)

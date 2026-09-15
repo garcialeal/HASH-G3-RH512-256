@@ -1,3 +1,12 @@
+/*
+ * SPDX-License-Identifier: MIT
+ *
+ * G3-RH512-256 Non-Cryptographic Spatial Hash Engine
+ *
+ * Copyright (C) 2026 Antonio García Leal (garcialeal)
+ * Licensed under the MIT License.
+ */
+
 #include "g3_hash.h"
 #include <stdio.h>
 #include <string.h>
