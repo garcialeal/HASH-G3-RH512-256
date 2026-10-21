@@ -9,6 +9,15 @@ A high-performance, non-cryptographic hash engine based on **Parallel Circular F
 
 Originally designed for general-purpose high-speed hashing, this engine powers vertex deduplication, $O(1)$ geometric state tracking, and ultra-fast mesh deduplication within the `.v4s` 3D file format and V4S12 geometry ecosystem.
 
+### SMHasher3 status
+
+This hash is integrated into the upstream SMHasher3 suite by Frank J. T. Wojcik.
+It was added in commit 3b619371 ("Add RH512 hash"), and the results summary was
+updated in the same release cycle ("Update results summary with RH512 hash
+family").
+
+Upstream: [gitlab.com](https://gitlab.com/fwojcik/smhasher3)
+
 ---
 
 ## Technical Highlights
