@@ -32,7 +32,7 @@ jobs:
             cc: clang
             cxx: clang++
           - name: macOS Clang (ARM64)
-            os: macos-14
+            os: macos-latest
             cc: clang
             cxx: clang++
           - name: Windows MSVC
