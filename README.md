@@ -1,5 +1,6 @@
 # HASH-G3-RH512-256
 
+[![CI](https://github.com/garcialeal/HASH-G3-RH512-256/actions/workflows/ci.yml/badge.svg)](https://github.com/garcialeal/HASH-G3-RH512-256/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Standard](https://img.shields.io/badge/Language-C99%20%7C%20C%2B%2B17-blue.svg)]()
 [![SMHasher3](https://img.shields.io/badge/SMHasher3-250%2F250%20passed-brightgreen.svg)](https://gitlab.com/fwojcik/smhasher3/-/blob/main/results/raw/RH512.txt)
@@ -120,14 +121,23 @@ int main() {
 ### Build Steps
 
 ```bash
-# Clone and build
-mkdir build && cd build
-cmake -DCMAKE_BUILD_TYPE=Release ..
-make -j$(nproc)
+# Configure and build
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+cmake --build build --config Release
 
 # Run test suite (checks the SMHasher3 verification value)
-ctest --output-on-failure
+ctest --test-dir build -C Release --output-on-failure
 ```
+
+When this library is added to another CMake project with `add_subdirectory`,
+the tests are not built unless `-DG3_HASH_BUILD_TESTS=ON` is given.
+
+### Continuous integration
+
+Every push and pull request is built and tested on Linux (GCC and Clang),
+macOS (ARM64), Windows (MSVC), a big-endian s390x system emulated with QEMU,
+and with AddressSanitizer and UndefinedBehaviorSanitizer. All jobs must
+reproduce the SMHasher3 verification value `0xD5E60849`.
 
 ---
 
